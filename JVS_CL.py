@@ -135,7 +135,7 @@ def JVS_contrastive_loss(output1, output2, temperature):
     JVS_cov = cov / H
 
     # follows the numerator () formula for the contrastive loss
-    sim = torch.exp(JVS_cov / temperature)
+    sim = torch.exp(2*JVS_cov / temperature)
     print('sim: ', sim)
     #print(sim1.size())
 
